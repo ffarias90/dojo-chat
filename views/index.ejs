@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Whatsapp Web</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="static/image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CRoboto:300,400,500" media="all">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/icomoon.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/main.css" rel="stylesheet">
+    <link href="static/css/queries.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="w-app">
+        <div class="container">
+            <aside class="col-md-4 w-contacts">
+                <header class="w-profile clearfix">
+                    <div class="avatar col-xs-7">
+                        <img src="static/image/avatar.png" alt="">
+                        <b><%= user.name %> </b>
+                    </div>
+
+                    <div class="w-chat-controls col-xs-4">
+                        <div class="icon-dots-three-vertical"></div>
+                        <div class="icon-message"></div>
+                    </div>
+                </header>
+                <div class="w-search icon-search">
+                    <input type="text" placeholder="Buscar o empezar un chat nuevo" class="w-search-contacts">
+                </div>
+                <ul class="w-recent-chats">
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/31minutos.png" alt="" class="wh-44">
+                            <h4 class="w-contact-name">31 Minutos</h4>
+                            <p class="w-last-message" id="mensaje">No se pique!!</p>
+                        </div>
+                        <div class="time" id="hora">14:27</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/tulio.jpg" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Tulio Triviño</h4>
+                            <p class="w-last-message">La clase va bien!</p>
+                        </div>
+                        <div class="time">11:25</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/bodoque.jpg" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Juan Carlos Bodoque</h4>
+                            <p class="w-last-message">El panel de speakers esta buanazo</p>
+                        </div>
+                        <div class="time">09:25</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/juanin.jpg" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Juanín Juan Harry</h4>
+                            <p class="w-last-message">Pues dale chamo!</p>
+                        </div>
+                        <div class="time">Ayer</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/policarpo.jpg" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Policarpo Avendaño</h4>
+                            <p class="w-last-message">¿Cómo van las chicas?</p>
+                        </div>
+                        <div class="time">Martes</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/huachimingo.jpg" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Huachimingo</h4>
+                            <p class="w-last-message">Hoy me toca clases de canto, yee!</p>
+                        </div>
+                        <div class="time">Lunes</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/guantecillo.png" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Raúl Guantecillo</h4>
+                            <p class="w-last-message">Wuju! esto me encanta!! en verdad!</p>
+                        </div>
+                        <div class="time">13/01/2016</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/patana.png" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Patana Tufillo</h4>
+                            <p class="w-last-message">No te preocupes, tengo el salón bajo control</p>
+                        </div>
+                        <div class="time">11/01/2016</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/mariohugo.jpg" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Mario Hugo</h4>
+                            <p class="w-last-message">Vao a comer?</p>
+                        </div>
+                        <div class="time">03/01/2016</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/mico.png" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Mico el Micófono</h4>
+                            <p class="w-last-message">Patana: Ya está lista la unidad 2</p>
+                        </div>
+                        <div class="time">03/01/2016</div>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <img src="static/image/calcetin.jpg" alt="" class="wh-44">
+                            <h4 class="w-contact-name">Calcetín con Rombos Man</h4>
+                            <p class="w-last-message">Estoy bajando con Policarpo, vao a comer?</p>
+                        </div>
+                        <div class="time">03/01/2016</div>
+                    </li>
+                </ul>
+            </aside>
+            <section class="col-md-8 w-contacts w-messages">
+                <header class="w-chat-messages clearfix">
+                    <div class="avatar col-xs-9 w-chat-profile">
+                        <img src="static/image/31minutos.png" alt="">
+                        <h4 class="w-contact-name">31 Minutos</h4>
+                        <ul class="w-users-messages">
+                            <li>Tulio Triviño, </li>
+                            <li>Policarpo, </li>
+                            <li>Patana, </li>
+                            <li>Mario Hugo, </li>
+                            <li>Calcetin con Rombos Man, </li>
+                            <li>Tú</li>
+                        </ul>
+                    </div>
+                    <div class="w-chat-controls col-xs-2">
+                        <div class="icon-attachment"></div>
+
+                        <div class="icon-dots-three-vertical"></div>
+                    </div>
+                </header>
+                <section class="w-chat-panel">
+                    <div class="w-message-list clearfix" id="chat">
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="blue-1">Huachimingo</h5>
+                                <p>Chicos han visto el nuevo corte de Policarpo?</p>
+                                <div class="time">11:12</div>
+                            </div>
+                        </div>
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="pink-1">Mario Hugo</h5>
+                                <p>¿Finalmente se corto?</p>
+                                <div class="time">11:13</div>
+                            </div>
+                        </div>
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="green-1">Raúl Guantecillo</h5>
+                                <p>Jajaja Sii finalmente se corto!!</p>
+                                <div class="time">11:13</div>
+                            </div>
+                        </div>
+
+                        <div class="w-message w-message-out">
+                            <div class="w-message-text">
+                                <p>Antes parecia mufasa jajajaja</p>
+                                <div class="time">11:14</div>
+                            </div>
+                        </div>
+
+                        <div class="w-message w-message-out">
+                            <div class="w-message-text">
+                                <p>Ahora si esta decente</p>
+                                <div class="time">11:18</div>
+                            </div>
+                        </div>
+
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="blue-1">Huachimingo</h5>
+                                <p>¿Por qué se lo habrá cortado?</p>
+                                <div class="time">11:20</div>
+                            </div>
+                        </div>
+
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="yellow-1">Policarpo</h5>
+                                <p>Ya ya ya, hacia mucho calor que más</p>
+                                <div class="time">11:25</div>
+                            </div>
+                        </div>
+
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="blue-1">Huachimingo</h5>
+                                <p>Esta siguiendo los pasos de Juan Diego!</p>
+                                <div class="time">11:30</div>
+                            </div>
+                        </div>
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="green-1">Raúl Guantecillo</h5>
+                                <p>Nunca!!! Juan Diego es único</p>
+                                <div class="time">11:31</div>
+                            </div>
+                        </div>
+
+                        <div class="w-message w-message-out">
+                            <div class="w-message-text">
+                                <p>Jajajaja</p>
+                                <div class="time">11:32</div>
+                            </div>
+                        </div>
+
+                        <div class="w-message w-message-in">
+                            <div class="w-message-text">
+                                <h5 class="yellow-1">Policarpo</h5>
+                                <p>Dale dale!</p>
+                                <div class="time">14:25</div>
+                            </div>
+                        </div>
+                        <div class="w-message w-message-out">
+                            <div class="w-message-text">
+                                <p>Jajaja</p>
+                                <div class="time">14:26</div>
+                            </div>
+                        </div>
+                        <div class="w-message w-message-out">
+                            <div class="w-message-text">
+                                <p>No se pique!!</p>
+                                <div class="time">14:27</div>
+                            </div>
+                        </div>
+                        <div id="conversacion">
+
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="pane-footer w-write-message-footer">
+                    <ul class="w-write-message-list clearfix">
+                        <li class="col-xs-1 w-write-message-item icon-insert_emoticon w-write-message-icon"></li>
+                        <li class="col-xs-10 w-write-message-item w-write-message-input">
+                            <input type="text" name="w-message-input" class="w-write-message-field" placeholder="Escribe tu mensaje aquí" id="mensajes">
+                        </li>
+                        <li class="col-xs-1 w-write-message-item icon-mic w-write-message-icon"></li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src="static/js/main.js"></script>
+</body>
+
+</html>
